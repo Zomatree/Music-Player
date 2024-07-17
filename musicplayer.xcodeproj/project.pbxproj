@@ -11,6 +11,8 @@
 		17B322642C475CD600658207 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B322632C475CD600658207 /* ContentView.swift */; };
 		17B322662C475CD800658207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B322652C475CD800658207 /* Assets.xcassets */; };
 		17B322692C475CD800658207 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B322682C475CD800658207 /* Preview Assets.xcassets */; };
+		17B322722C475FA700658207 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B322712C475FA100658207 /* PlayerView.swift */; };
+		17B322772C47730700658207 /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B322762C47730100658207 /* UIImageColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		17B322632C475CD600658207 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17B322652C475CD800658207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17B322682C475CD800658207 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		17B3226F2C475D3100658207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		17B322712C475FA100658207 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		17B322762C47730100658207 /* UIImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +56,11 @@
 		17B322602C475CD600658207 /* musicplayer */ = {
 			isa = PBXGroup;
 			children = (
+				17B322762C47730100658207 /* UIImageColors.swift */,
+				17B3226F2C475D3100658207 /* Info.plist */,
 				17B322612C475CD600658207 /* musicplayerApp.swift */,
 				17B322632C475CD600658207 /* ContentView.swift */,
+				17B322712C475FA100658207 /* PlayerView.swift */,
 				17B322652C475CD800658207 /* Assets.xcassets */,
 				17B322672C475CD800658207 /* Preview Content */,
 			);
@@ -83,6 +91,8 @@
 			dependencies = (
 			);
 			name = musicplayer;
+			packageProductDependencies = (
+			);
 			productName = musicplayer;
 			productReference = 17B3225E2C475CD600658207 /* musicplayer.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +121,8 @@
 				Base,
 			);
 			mainGroup = 17B322552C475CD600658207;
+			packageReferences = (
+			);
 			productRefGroup = 17B3225F2C475CD600658207 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17B322722C475FA700658207 /* PlayerView.swift in Sources */,
+				17B322772C47730700658207 /* UIImageColors.swift in Sources */,
 				17B322642C475CD600658207 /* ContentView.swift in Sources */,
 				17B322622C475CD600658207 /* musicplayerApp.swift in Sources */,
 			);
@@ -269,17 +283,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = musicplayer/musicplayer.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"musicplayer/Preview Content\"";
-				DEVELOPMENT_TEAM = T23HBWQ54Y;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T23HBWQ54Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = musicplayer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Music Player";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Landscape music playing";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,6 +308,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = live.zomatree.musicplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Music Player iOS";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,17 +323,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = musicplayer/musicplayer.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"musicplayer/Preview Content\"";
-				DEVELOPMENT_TEAM = T23HBWQ54Y;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T23HBWQ54Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = musicplayer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Music Player";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Landscape music playing";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +348,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = live.zomatree.musicplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Music Player iOS";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
