@@ -12,7 +12,7 @@
 		17B322662C475CD800658207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B322652C475CD800658207 /* Assets.xcassets */; };
 		17B322692C475CD800658207 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B322682C475CD800658207 /* Preview Assets.xcassets */; };
 		17B322722C475FA700658207 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B322712C475FA100658207 /* PlayerView.swift */; };
-		17B322772C47730700658207 /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B322762C47730100658207 /* UIImageColors.swift */; };
+		17D4F2442C4DEC6B00E48A2E /* FormatStyle+TimerCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D4F2432C4DEC5700E48A2E /* FormatStyle+TimerCountdown.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		17B322682C475CD800658207 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		17B3226F2C475D3100658207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		17B322712C475FA100658207 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
-		17B322762C47730100658207 /* UIImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
+		17D4F2432C4DEC5700E48A2E /* FormatStyle+TimerCountdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormatStyle+TimerCountdown.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 		17B322602C475CD600658207 /* musicplayer */ = {
 			isa = PBXGroup;
 			children = (
-				17B322762C47730100658207 /* UIImageColors.swift */,
+				17D4F2422C4DEC4700E48A2E /* Extensions */,
 				17B3226F2C475D3100658207 /* Info.plist */,
 				17B322612C475CD600658207 /* musicplayerApp.swift */,
 				17B322632C475CD600658207 /* ContentView.swift */,
@@ -73,6 +73,14 @@
 				17B322682C475CD800658207 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		17D4F2422C4DEC4700E48A2E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				17D4F2432C4DEC5700E48A2E /* FormatStyle+TimerCountdown.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D4F2442C4DEC6B00E48A2E /* FormatStyle+TimerCountdown.swift in Sources */,
 				17B322722C475FA700658207 /* PlayerView.swift in Sources */,
-				17B322772C47730700658207 /* UIImageColors.swift in Sources */,
 				17B322642C475CD600658207 /* ContentView.swift in Sources */,
 				17B322622C475CD600658207 /* musicplayerApp.swift in Sources */,
 			);
